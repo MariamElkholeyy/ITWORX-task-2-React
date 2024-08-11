@@ -1,0 +1,19 @@
+
+.nominee {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.nominee img {
+    border-radius: 70%;
+    margin-right: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.nomineeInfo p {
+    font-weight: lighter;
+    color: #636363;
+
+}
