@@ -1,4 +1,3 @@
-import Image from "next/image";
 import styles from "./page.module.css";
 import Nominee from "./components/nominee";
 import Nominations from "./components/nominations";

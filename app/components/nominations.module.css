@@ -14,10 +14,12 @@
     text-align: left;
     /* padding: 10px; */
     margin-left: 20px;
+    /* text-overflow: clip; */
+    overflow-wrap:anywhere;
 }
 
 .nominateButton {
-    margin: 30px 0px 30px 20px;
+    margin: 30px 0px;
     background-color: #EBEBEB;
     color: #fff;
     padding: 15px 20px 15px 20px;
@@ -34,10 +36,10 @@
 }
 
 .nominationEmployees {
-    /* margin-left: 20px; */
+    margin-left: 20px;
     display: flex;
     flex-direction: row;
-    align-items: start;
+    align-items: center;
     /* padding: 20px; */
     border-radius: 10px;
     justify-content: start;
@@ -47,25 +49,11 @@
 .nominationEmployeesText {
     display: flex;
     flex-direction: column;
-    justify-content: start;
-    align-items: end;
-    margin-right: 20px; /* Added margin to create space between text and button */
 }
 
-.nominationEmployees {
+
+.nominationEmployeesText span{
     margin-left: 20px;
-}
-
-.nominationEmployees {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-}
-
-.nominationEmployees .nominationEmployeesText {
-    margin-right: 20px;
-}
-
-.nominationEmployees .nominate-button {
-    margin: 0;
+    margin-bottom: 10px;
+    text-align: left;
 }
