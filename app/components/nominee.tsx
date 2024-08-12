@@ -1,5 +1,6 @@
 
 import styles from "./nominee.module.css"
+import Image from 'next/image'
 
 type NomineeParams = {
     nomineeName: string;
@@ -12,7 +13,7 @@ const Nominee = ({ nomineeName, nominatedBy }: NomineeParams) =>
     return (
         
         <div className={styles.nominee}>
-            <img src="https://via.placeholder.com/50" alt={nomineeName}/>
+            <img src={"https://via.placeholder.com/50"} alt={nomineeName}/>
             <div className={styles.nomineeInfo}>
                 <h3>{nomineeName}</h3>
                 <p>Nominated by : {nominatedBy}</p>

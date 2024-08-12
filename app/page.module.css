@@ -98,3 +98,31 @@
   background-image: linear-gradient(to right, #aa0000, #D60220);
   color: #fff;
 }
+
+
+
+@media only screen and (max-width: 768px) {
+  .main{
+    margin: 40px 55px;
+  }
+  .currentNominations , .previousNominations{
+    padding: 0 20px;
+  }
+  .buttons{
+    transition: 25px;
+    margin-left: 155vw;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .main {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .currentNominations, .previousNominations {
+    margin-left: 0;
+  }
+  .buttons {
+    margin-left: 0;
+  }
+}

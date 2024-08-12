@@ -18,6 +18,60 @@
 
 }
 
+.closeButton {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    padding: 10px;
+  }
+  
+.closeIcon {
+    display: block;
+    width: 50px;
+    height: 50px;
+    background-color: #333;
+    mask: url('data:image/svg+xml;utf8,<svg viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>') no-repeat center;
+    transition: transform 0.3s ease-in-out;
+}
+  
+.sidebar.open .closeButton {
+display: block;
+}
+
+.sidebar.closed .closeButton {
+display: none;
+}
+
+.sidebar.open .hamburger {
+display: none;
+}
+
+.sidebar.closed .hamburger {
+display: block;
+}
+  
+.hamburgerIcon:before,
+.hamburgerIcon:after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #333;
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hamburgerIcon:before {
+    transform: translateY(-5px);
+  }
+  
+  .hamburgerIcon:after {
+    transform: translateY(5px);
+  }
+  
+
 .sidebar button {
     background-image: linear-gradient(to right, #e4001e, #ff7700);
     font-size: 14px;
@@ -55,6 +109,16 @@
 
 }
 
+.ul.closed , .sidebar.closed{
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+.ul.open , .sidebar.open {
+opacity: 1;
+pointer-events: auto;
+}
+
 .li {
 
     font-weight: bold;
@@ -66,7 +130,7 @@
 
 }
 
-.a {
+.link {
     text-decoration: none;
     color: #000;
     font-size: 18px;
@@ -76,7 +140,7 @@
 }
 
 
-.li:hover {
+.li:hover , li.active{
     width: 260px;
     padding-right: 5%;
     background: rgb(231, 231, 231);
@@ -86,7 +150,14 @@
     padding-right: 14.5vw; */
 }
 
-.li:focus {
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+.button{
+    text-decoration: none;
 }
+
+
+@media only screen and (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+  }
