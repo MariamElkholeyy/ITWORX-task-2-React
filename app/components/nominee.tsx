@@ -4,11 +4,13 @@ import Image from 'next/image'
 
 type NomineeParams = {
     nomineeName: string;
-    nominatedBy: string;
+    nominatedBy?: string;
+    position?:string;
+    experience?:string | number;
 }
 
 
-const Nominee = ({ nomineeName, nominatedBy }: NomineeParams) => 
+const Nominee = ({ nomineeName, nominatedBy ,position  ,experience}: NomineeParams) => 
 {
     return (
         
@@ -16,7 +18,9 @@ const Nominee = ({ nomineeName, nominatedBy }: NomineeParams) =>
             <img src={"https://via.placeholder.com/50"} alt={nomineeName}/>
             <div className={styles.nomineeInfo}>
                 <h3>{nomineeName}</h3>
-                <p>Nominated by : {nominatedBy}</p>
+                {nominatedBy && <p>Nominated by: {nominatedBy}</p>}
+                {position && experience &&  <p>Position: {position} . {experience} years of experience. </p>}
+                {/* {experience && <p>.{experience} years of experience.</p>} */}
             </div>
         </div>
     );

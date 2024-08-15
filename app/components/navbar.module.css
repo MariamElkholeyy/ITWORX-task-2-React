@@ -1,0 +1,37 @@
+.mainHeader { 
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    border-bottom: 1px solid #e0e0e0;
+    background: #f8f8f8;
+    overflow: hidden;
+    font-size: small;
+  }
+  
+.mainHeader nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.mainHeader nav ul li {
+    float: left;
+}
+
+.mainHeader nav ul li h3 {
+    margin: 0;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+
+.mainHeader nav ul li a {
+    display: block;  
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    padding: 17.75px;
+}

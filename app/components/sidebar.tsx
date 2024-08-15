@@ -40,6 +40,11 @@ const SideBar = () => {
           </Link>
         </li>
         <li className={styles.li}>
+          <Link href="/voting-page" className={styles.link}>
+            Vote
+          </Link>
+        </li>
+        <li className={styles.li}>
           <Link href="/results" className={styles.link}>
             Results
           </Link>
