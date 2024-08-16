@@ -12,7 +12,7 @@ const Prize =({rank , prize , img}:prizeProps)=>{
     return (
         <div className={styles.prizeContainer}>
             <div className={styles.text}>
-                <h2 className={styles.rank}>{rank} place </h2>
+                <h3 className={styles.rank}>{rank} place </h3>
                 <p className={styles.description}>{prize}</p>
             </div>
             

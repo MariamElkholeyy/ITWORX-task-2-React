@@ -1,7 +1,10 @@
+
+
+
 .main {
     padding: 10px;
     /* background-color: #f7c2c2; */
-    width: 50%;
+    width: 55%;
     /* width: 1200px;
     height: 100%; */
     display: flex;
@@ -32,11 +35,16 @@
 
 .container{
     display: flex;
+    margin-right: 40px;
     /* flex-direction: column; */
 }
 
 .prizes{
     margin-top: 35px;
+    /* background: rgb(255, 255, 158); */
+    height:50%;
+    /* padding-right: 70px; */
+    
 }
 
 .prizeHeader{
