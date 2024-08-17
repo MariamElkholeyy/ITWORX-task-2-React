@@ -1,0 +1,23 @@
+.progressContainer {
+    width: 100%;
+    background-color: #ddd;
+    border-radius: 5px;
+    padding: 3px;
+    margin-bottom: 10px;
+}
+
+.progressBar {
+    width: 50%;
+    background-color: red;
+    height: 9px;
+    border-radius: 5px;
+    text-align: right;
+    padding-right: 10px;
+    color: white;
+    line-height: 30px;
+}
+
+.label {
+    font-size: 15px;
+    margin-bottom: 5px;
+}

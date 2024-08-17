@@ -1,0 +1,36 @@
+aside {
+    display: flex;
+    float: right;
+    width: 25%;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 10px 0;
+}
+
+.menu button {
+    border: none;
+    /*background-color: white;*/
+    padding: 5px 50px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: 170px;
+    height: 35px;
+    padding: 0px;
+
+}
+
+.menu button:hover {
+    background-color: #D0D0D0;
+}
