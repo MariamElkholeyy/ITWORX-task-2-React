@@ -15,7 +15,9 @@ const Nominee = ({ nomineeName, nominatedBy ,position  ,experience}: NomineePara
     return (
         
         <div className={styles.nominee}>
-            <img src={"https://via.placeholder.com/50"} alt={nomineeName}/>
+            <div className={styles.nomineepic}>
+                <img src={"https://via.placeholder.com/50"} alt={nomineeName}/>
+            </div>
             <div className={styles.nomineeInfo}>
                 <h3>{nomineeName}</h3>
                 {nominatedBy && <p>Nominated by: {nominatedBy}</p>}

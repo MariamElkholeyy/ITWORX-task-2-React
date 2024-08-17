@@ -2,10 +2,14 @@ import styles from "./page.module.css";
 import Nominee from "./components/nominee";
 import Nominations from "./components/nominations";
 import SideBar from "./components/sidebar";
+import Navbar from "./components/navbar";
 export default function Home() {
   return (
     <>
-      <SideBar/>
+      <div className={styles.headerContainer}>
+        {/* <Navbar /> */}
+        <SideBar />
+      </div>
       <main className={styles.main}>
         <Nominations/>
         <div className={styles.currentNominations}>

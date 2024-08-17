@@ -5,15 +5,24 @@
     margin-bottom: 15px;
 }
 
-.nominee img {
-    border-radius: 70%;
+.nomineepic{
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
     margin-right: 15px;
-    display: flex;
-    justify-content: flex-start;
+}
+
+.nominee img {
+    width: 100%;
+    height: 100%;
+    border-radius: 70%;
+    object-fit: cover;
+    
 }
 
 .nomineeInfo p {
     font-weight: lighter;
     color: #636363;
+
 
 }
