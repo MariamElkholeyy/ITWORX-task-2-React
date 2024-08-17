@@ -10,7 +10,7 @@ const Menu = () => {
 
                 <ul className={`${styles.ul} `}>
                     <li className={styles.li}>
-                        <Link href="./voting-page/page.tsx" className={styles.button}>
+                        <Link href="./voting-page" className={styles.button}>
                             <button type="button">
                                 Voting
                             </button>

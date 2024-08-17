@@ -1,3 +1,4 @@
+import Navbar from "../components/navbar";
 import { Title, ReasonTitle , Submit } from "../components/title";
 import styles from "./page.module.css";
 
@@ -5,6 +6,7 @@ import styles from "./page.module.css";
 export default function Home() {
     return (
         <>
+        <Navbar/>
         <div className={styles.container}>
             <h1 className={styles.h1}>Nominate a Colleague</h1>
             <Title label="Nominee's Name" placeholder="Enter First and Last Name"></Title>
