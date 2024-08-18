@@ -22,7 +22,7 @@ export default function Home() {
                                 <div className="input-box">
                                     <span className="label">E-mail</span>
                                     <div className=" flex-r input">
-                                        <input type="text" placeholder="name@abc.com">
+                                        <input type="text" placeholder="name@abc.com"/>
                                             <i className="fas fa-at"></i>
                                     </div>
                                 </div>
@@ -30,17 +30,17 @@ export default function Home() {
                                 <div className="input-box">
                                     <span className="label">Password</span>
                                     <div className="flex-r input">
-                                        <input type="password" placeholder="8+ (a, A, 1, #)">
+                                        <input type="password" placeholder="8+ (a, A, 1, #)"/>
                                             <i className="fas fa-lock"></i>
                                     </div>
                                 </div>
 
                                 <div className="check">
-                                    <input type="checkbox" name="" id="">
+                                    <input type="checkbox" name="" id=""/>
                                         <span>I've read and agree with T&C</span>
                                 </div>
 
-                                <input className="btn" type="submit" value="Create an Account">
+                                <input className="btn" type="submit" value="Create an Account"/>
                                     <span className="extra-line">
                                         <span>Already have an account?</span>
                                         <a href="login.html">Log In</a>
