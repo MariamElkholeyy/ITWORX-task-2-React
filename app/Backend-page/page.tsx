@@ -1,6 +1,6 @@
 import Navbar from "../components/navbar";
 import Nominee from "../components/nominee";
-import VoteNominee from  "../components/voteNominee";
+import VoteNominee from "../components/voteNominee";
 import styles from "./page.module.css";
 import Menu from "../components/menu";
 import CurrentVotes from "../components/current.votes";
@@ -9,30 +9,34 @@ import NomineeProgress from "../components/nomineeProgress";
 export default function Home() {
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className={styles.container}>
         <main className={styles.main}>
           <h1>Employee of the Month</h1>
-          <CurrentVotes/>
-          <VoteNominee nomineeName={"Amanda Johnson"} experience={"5"} position="Software Engineer"/>
-          <VoteNominee nomineeName={"John Doe"}      experience={"3"} position="Data Scientist"/>
-          <VoteNominee nomineeName={"Jane Doe"}      experience={"2"} position="Product Manager"/>
-          <VoteNominee nomineeName={"Bob Smith"}     experience={"1"} position="UX Designer" />
-          <VoteNominee nomineeName={"Alice Johnson"} experience={"4"} position="DevOps Engineer"/>
-          <NomineeProgress nomineeName={"Alice Johnson"} voteNumber={158}/>
+          <CurrentVotes />
+          <NomineeProgress nomineeName={"Amanda Johnson"} voteNumber={158} />
+          <NomineeProgress nomineeName={"John Doe"} voteNumber={130} />
+          <NomineeProgress nomineeName={"Jane Doe"} voteNumber={120} />
+          <NomineeProgress nomineeName={"Bob Smith"} voteNumber={100} />
+          <NomineeProgress nomineeName={"Alice Johnson"} voteNumber={80} />
+          <div>
+            <button className={`${styles.End}`}>End Voting</button>
+          </div>
         </main>
-        <aside>
-          <Menu />
-        </aside>
-        <section>
+        <div>
+          {/* <aside className={`${styles.aside}`}> */}
+            <Menu />
+          {/* </aside> */}
+          {/* <section className={`${styles.section}`}>
             <div id="vote-start">
-                <p>Voting started on <br/> September 1, 2023</p>
+              <p>Voting started on <br /> September 1, 2023</p>
             </div>
-            <br/>
-            <div id="vote-end">
-                <p>Voting ends on <br/> [end date]</p>
+            <br />
+            <div className={`${styles.vote_end}`}>
+              <p>Voting ends on <br /> [end date]</p>
             </div>
-        </section>
+          </section> */}
+        </div>
       </div>
     </>
   );
