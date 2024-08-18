@@ -7,10 +7,11 @@ type NomineeParams = {
     nominatedBy?: string;
     position?:string;
     experience?:string | number;
+    voteNumber?:number;
 }
 
 
-const Nominee = ({ nomineeName, nominatedBy ,position  ,experience}: NomineeParams) => 
+const Nominee = ({ nomineeName, nominatedBy ,position  ,experience ,voteNumber}: NomineeParams) => 
 {
     return (
         
@@ -22,7 +23,7 @@ const Nominee = ({ nomineeName, nominatedBy ,position  ,experience}: NomineePara
                 <h3>{nomineeName}</h3>
                 {nominatedBy && <p>Nominated by: {nominatedBy}</p>}
                 {position && experience &&  <p>Position: {position} . {experience} years of experience. </p>}
-                {/* {experience && <p>.{experience} years of experience.</p>} */}
+                {voteNumber && <p>Votes : {voteNumber}</p>}
             </div>
         </div>
     );

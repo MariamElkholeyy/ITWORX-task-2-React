@@ -50,7 +50,7 @@ const SideBar = () => {
           </Link>
         </li>
         <li className={styles.li}>
-          <Link href="/contact" className={styles.link}>
+          <Link href="/Backend-page" className={styles.link}>
             Contact
           </Link>
         </li>

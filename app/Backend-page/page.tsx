@@ -4,6 +4,7 @@ import VoteNominee from  "../components/voteNominee";
 import styles from "./page.module.css";
 import Menu from "../components/menu";
 import CurrentVotes from "../components/current.votes";
+import NomineeProgress from "../components/nomineeProgress";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
           <VoteNominee nomineeName={"Jane Doe"}      experience={"2"} position="Product Manager"/>
           <VoteNominee nomineeName={"Bob Smith"}     experience={"1"} position="UX Designer" />
           <VoteNominee nomineeName={"Alice Johnson"} experience={"4"} position="DevOps Engineer"/>
-
+          <NomineeProgress nomineeName={"Alice Johnson"}  voteNumber={158}/>
         </main>
       </div>
     </>
