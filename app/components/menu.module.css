@@ -41,11 +41,32 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: flex-end;
-    margin-top: 90px;
+    align-items: start;
+    /* margin-top: 90px; */
     margin-right: 100px;
+    margin-bottom: 0px;
 }
 
 .vote_end {
     padding-right: 35px;
+}
+
+.container{
+    height: 95vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 0px;
+}
+
+.startEnd{
+    font-weight: bolder;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.date{
+    font-size: 14px;
+    margin-bottom: 15px;
+    color: #636363;;
 }

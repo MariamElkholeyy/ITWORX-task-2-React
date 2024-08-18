@@ -6,7 +6,7 @@ import styles from './menu.module.css';
 const Menu = () => {
     return (
         <>
-            <div>
+            <div className={styles.container}>
                 <aside className={`${styles.aside}`}>
                     <div className={`${styles.menu}`}>
 
@@ -40,11 +40,13 @@ const Menu = () => {
                 </aside>
                 <section className={`${styles.section}`}>
                     <div id="vote-start">
-                        <p>Voting started on <br /> September 1, 2023</p>
+                        <p className={styles.startEnd}>Voting started on </p>
+                        <p className={styles.date}>September 1, 2023</p>
                     </div>
                     <br />
                     <div className={`${styles.vote_end}`}>
-                        <p>Voting ends on <br /> [end date]</p>
+                        <p className={styles.startEnd}>Voting ends on </p>
+                        <p className={styles.date}>[end date]</p>
                     </div>
                 </section>
             </div>

@@ -25,7 +25,10 @@ export default function Home() {
         </main>
         <div>
           {/* <aside className={`${styles.aside}`}> */}
-            <Menu />
+        <div className={styles.menu}>
+          <Menu />
+        </div>
+            
           {/* </aside> */}
           {/* <section className={`${styles.section}`}>
             <div id="vote-start">
