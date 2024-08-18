@@ -1,0 +1,38 @@
+
+.winner{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.winnerImg{
+    width: 500px;
+    height: 500px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+}
+
+.img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+.winnerInfo{
+    margin-left: 35px;
+}
+
+.h2{
+    font-size: 50px;
+    font-weight: bold;
+
+
+}
+
+.p{
+    font-size: 35px;
+    margin-bottom: 50px;
+    color: #636363;;
+}
