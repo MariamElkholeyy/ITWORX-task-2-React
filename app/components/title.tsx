@@ -4,9 +4,12 @@ import styles from './title.module.css'
 type titleProps ={
     label : string ;
     placeholder ?: string ;
+    // name?: string;
+    // value?: string;
+    // onChange: (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
 }
 
-const Title = ({label , placeholder} : titleProps) =>{
+const Title = ({label , placeholder  } : titleProps) =>{
     return(
         <div className={styles.title}>
             <label className={styles.label}>{label}<span className={styles.spanM}>*</span> </label>
@@ -16,7 +19,7 @@ const Title = ({label , placeholder} : titleProps) =>{
 }
 
 
-const ReasonTitle =({label , placeholder} : titleProps) =>{
+const ReasonTitle =({label , placeholder } : titleProps) =>{
     return(
         <div className={styles.title}>
            <label className={styles.label} >{label}<span className={styles.spanM}>*</span></label>
@@ -29,7 +32,7 @@ const ReasonTitle =({label , placeholder} : titleProps) =>{
 const Submit =()=>{
     return(
         <div className={styles.submit}>
-            <button className={styles.button}>
+            <button className={styles.button} type="submit">
                 Submit <br />Nomination
             </button>
         </div>
