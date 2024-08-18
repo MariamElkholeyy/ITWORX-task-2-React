@@ -13,14 +13,26 @@ export default function Home() {
       <div className={styles.container}>
         <main className={styles.main}>
           <h1>Employee of the Month</h1>
-          <p className={styles.p1}>Vote for your favorite employee</p>
+          <CurrentVotes/>
           <VoteNominee nomineeName={"Amanda Johnson"} experience={"5"} position="Software Engineer"/>
           <VoteNominee nomineeName={"John Doe"}      experience={"3"} position="Data Scientist"/>
           <VoteNominee nomineeName={"Jane Doe"}      experience={"2"} position="Product Manager"/>
           <VoteNominee nomineeName={"Bob Smith"}     experience={"1"} position="UX Designer" />
           <VoteNominee nomineeName={"Alice Johnson"} experience={"4"} position="DevOps Engineer"/>
-          <NomineeProgress nomineeName={"Alice Johnson"}  voteNumber={158}/>
+
         </main>
+        <aside>
+          <Menu />
+        </aside>
+        <section>
+            <div id="vote-start">
+                <p>Voting started on <br/> September 1, 2023</p>
+            </div>
+            <br/>
+            <div id="vote-end">
+                <p>Voting ends on <br/> [end date]</p>
+            </div>
+        </section>
       </div>
     </>
   );
