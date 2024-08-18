@@ -15,4 +15,4 @@ const NominationProvider = ({ children }) => {
   );
 };
 
-export { NominationProvider, NominationContext };
+export { NominationProvider, NominationContext }; 
