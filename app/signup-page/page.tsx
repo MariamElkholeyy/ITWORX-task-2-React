@@ -43,7 +43,7 @@ export default function Home() {
                                 <input className="btn" type="submit" value="Create an Account"/>
                                     <span className="extra-line">
                                         <span>Already have an account?</span>
-                                        <a href="login.html">Log In</a>
+                                        <Link className={styles.link} href="login.html">Log In</Link>
                                     </span>
                             </form>
 
