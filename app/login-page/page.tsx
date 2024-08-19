@@ -68,7 +68,7 @@ export default function Home() {
                     <span>I've read and agree with T&C</span>
                 </div> */}
 
-                <input className={styles.btn} type="submit" value="Create an Account" />
+                <input className={styles.btn} type="submit" value="Log In" />
                 <span className={styles.extraLine}>
                   <span>Don`t have an account?</span>
                   <Link className={styles.link} href="signup.html">Sign Up</Link>

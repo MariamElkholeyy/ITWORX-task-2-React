@@ -1,3 +1,4 @@
+# import datetime
 import sqlalchemy as sa
 from sqlalchemy.ext.declarative import declarative_base
 #Falsk app settings
