@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './navbar.module.css';
+import Link from 'next/link';
 
 const Navbar = () => {
   return (
@@ -12,7 +13,8 @@ const Navbar = () => {
               <li>
                 <h3>Acme Inc</h3>
               </li>
-              <li><a href="homepage">Home</a></li>
+              <li><Link href="/">Home</Link></li>
+              <li><Link href="/login">Login</Link></li>
             </ul>
           </nav>
         </header>
