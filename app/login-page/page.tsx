@@ -16,7 +16,7 @@ export default function Home() {
                                 <span>Acme</span>
                             </div>
                             <h1>Log in</h1>
-                            <p>It's not long before you embark on this journey!</p>
+                            <p>It&apos;s not long before you embark on this journey!</p>
 
                             <form className="flex-c">
                                 <div className="input-box">
@@ -42,7 +42,7 @@ export default function Home() {
 
                                 <input className="btn" type="submit" value="Create an Account"/>
                                     <span className="extra-line">
-                                        <span>Don't have an account?</span>
+                                        <span>Don&apos;t have an account?</span>
                                         <a href="signup.html">Sign Up</a>
                                     </span>
                             </form>

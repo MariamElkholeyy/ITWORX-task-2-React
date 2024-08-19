@@ -16,7 +16,7 @@ export default function Home() {
                                 <span >Acme</span>
                             </div>
                             <h1>Sign Up</h1>
-                            <p>It's not long before you embark on this journey! </p>
+                            <p>It&apos;s not long before you embark on this journey! </p>
 
                             <form className={styles.flex_c}>
                                 <div className="input-box">
@@ -37,7 +37,7 @@ export default function Home() {
 
                                 <div className="check">
                                     <input type="checkbox" name="" id=""/>
-                                        <span>I've read and agree with T&C</span>
+                                        <span>I&apos;ve read and agree with T&C</span>
                                 </div>
 
                                 <input className="btn" type="submit" value="Create an Account"/>
