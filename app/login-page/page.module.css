@@ -2,7 +2,7 @@
 
 
 
-*{
+.body{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
@@ -62,7 +62,7 @@
     color: #000000B2;
 }
 
-form{
+.form{
     align-items: flex-start !important;
     width: 100%;
     margin-top: 15px;
@@ -88,7 +88,7 @@ form{
     justify-content: flex-start;
 }
 
-input{
+.input{
     border: none;
     outline: none;
     padding: 10px 5px;
