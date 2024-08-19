@@ -1,18 +1,21 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from "react";
 
-const NominationContext = createContext({
-  nominees: [], // Initialize nominees as an empty array
-  setNominees: () => {} // Initialize setNominees as an empty function
-});
+const NominationContext = createContext();
 
 const NominationProvider = ({ children }) => {
   const [nominees, setNominees] = useState([]);
 
+  useEffect(() => {
+    fetch("http://localhost:8000/nominees")
+      .then(response => response.json())
+      .then(data => setNominees(data));
+  }, []);
+
   return (
-    <NominationContext.Provider value={{ nominees, setNominees }}>
+    <NominationContext.Provider value={{ nominees }}>
       {children}
     </NominationContext.Provider>
   );
 };
 
-export { NominationProvider, NominationContext }; 
+export { NominationProvider, NominationContext };

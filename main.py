@@ -1,5 +1,7 @@
 import psycopg2
 from fastapi import FastAPI, Depends
+from psycopg2.extras import DictCursor
+from pydantic import BaseModel
 
 class Database:
     def __init__(self):
@@ -164,12 +166,25 @@ def get_user(user_id: int, db: Database = Depends(get_db)):
         return {"message": "User not found"}
 
 @app.post("/nominations/")
-def create_nomination(nominee_user_id: int, nominator_user_id: int, reason_for_nomination: str, db: Database = Depends(get_db)):
+async def create_nomination(nominee_user_id: int, nominator_user_id: int, reason_for_nomination: str, db: Database = Depends(get_db)):
     try:
         nominee = Nominee.create(db, nominee_user_id, nominator_user_id, reason_for_nomination)
         return {"message": "Nominee created successfully"}
     except ValueError as e:
         return {"error": str(e)}
+
+
+@app.get("/my-nominations")
+async def get_my_nominations(user_id: int):
+    cur.execute("SELECT * FROM nominations WHERE user_id = %s", (user_id,))
+    nominations = fetchall()
+    return [nomination(**nomination) for nomination in nominations]
+
+@app.get("/current-nominations")
+async def get_current_nominations():
+    cur.execute("SELECT * FROM nominations")
+    nominations = cur.fetchall()
+    return [nomination(**nomination) for nomination in nominations]
 
 @app.get("/nominations/")
 def get_all_nominations(db: Database = Depends(get_db)):
