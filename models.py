@@ -3,10 +3,26 @@ from fastapi import FastAPI, Depends
 from psycopg2.extras import DictCursor
 from pydantic import BaseModel
 
+# Database connection settings
+DB_HOST = 'localhost'
+DB_NAME = 'itworx'
+DB_USER = 'postgres'
+DB_PASSWORD = '1234'
+
+# Connect to the database
+conn = psycopg2.connect(
+    host=DB_HOST,
+    database=DB_NAME,
+    user=DB_USER,
+    password=DB_PASSWORD
+)
+
+cur = conn.cursor(cursor_factory=psycopg2.extras.DictCursor)
+
 class Database:
     def __init__(self):
         self.conn = psycopg2.connect(
-            database="postgres",
+            database="itworx",
             user="postgres",
             password="1234",
             host="localhost",
@@ -177,7 +193,7 @@ async def create_nomination(nominee_user_id: int, nominator_user_id: int, reason
 @app.get("/my-nominations")
 async def get_my_nominations(user_id: int):
     cur.execute("SELECT * FROM nominations WHERE user_id = %s", (user_id,))
-    nominations = fetchall()
+    nominations = cur.fetchall()
     return [nomination(**nomination) for nomination in nominations]
 
 @app.get("/current-nominations")

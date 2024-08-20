@@ -1,8 +1,9 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from fastapi import FastAPI
-from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from models import Nominee , Vote 
+
 
 Base = declarative_base()
 
@@ -24,23 +25,3 @@ app = FastAPI()
 engine = create_engine('sqlite:///voting.db')
 Session = sessionmaker(bind=engine)
 
-@app.get("/nominees")
-def get_nominees():
-    with Session() as session:
-        nominees = session.query(Nominee).all()
-        return nominees
-
-@app.post("/vote/{nominee_id}")
-def cast_vote(nominee_id: int, voter_id: int):
-    with Session() as session:
-        # Check if the voter has already voted for this nominee
-        existing_vote = session.query(Vote).filter_by(nominee_id=nominee_id, voter_id=voter_id).first()
-        if existing_vote:
-            return {"message": "You've already voted for this nominee."}
-
-        # Cast the vote
-        vote = Vote(nominee_id=nominee_id, voter_id=voter_id)
-        session.add(vote)
-        session.commit()
-
-        return {"message": "Vote cast successfully."}
