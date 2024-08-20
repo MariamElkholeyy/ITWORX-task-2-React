@@ -78,5 +78,35 @@ def start_voting_session():
     except jwt.InvalidTokenError:
         return jsonify({'error': 'Invalid token'}), 401
 
+@app.route('/api/voting_sessions', methods=['PATCH'])
+def end_voting_session():
+    try:
+        # Authentication logic
+        auth_header = request.headers.get('Authorization')
+        if not auth_header:
+            return jsonify({'error': 'Unauthorized'}), 401
+        token = auth_header.split(' ')[1]
+        user_id = jwt.decode(token, app.config['JWT_SECRET_KEY'], algorithms=['HS256'])['user_id']
+        user = User.query.get(user_id)
+        if not user or not user.is_admin:
+            return jsonify({'error': 'Unauthorized'}), 401
+
+        # Get the current voting session
+        voting_session = VotingSession.query.order_by(VotingSession.id.desc()).first()
+        if not voting_session:
+            return jsonify({'error': 'No active voting session'}), 404
+
+        # End the voting session
+        voting_session.end_time = datetime.datetime.utcnow()
+        db.session.commit()
+
+        return jsonify({'message': 'Voting session ended'}), 200
+    except sa.exc.OperationalError as e:
+        return jsonify({'error': 'Database connection error'}), 500
+    except jwt.ExpiredSignatureError:
+        return jsonify({'error': 'Token has expired'}), 401
+    except jwt.InvalidTokenError:
+        return jsonify({'error': 'Invalid token'}), 401
+
 if __name__ == '__main__':
     app.run(debug=True)
